@@ -1,0 +1,14 @@
+{
+  "notes": [
+    {
+      "id": "1",
+      "title": "Test Title",
+      "text": "This is the starter note"
+    },
+    {
+      "title": "TEST POST ROUTE",
+      "text": "TEXT FOR POST ROUTE",
+      "id": "2nxgl18f0l3qktypb"
+    }
+  ]
+}
