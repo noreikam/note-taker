@@ -1,5 +1,5 @@
 const { createNote, validateNote, deleteNote } = require('../../lib/notes');
-const { notes } = require('../../db/db.json');
+let { notes } = require('../../db/db.json');
 const router = require('express').Router();
 const uniqid = require('uniqid');
 
@@ -18,8 +18,9 @@ router.post('/notes', (req, res) => {
   }
 });
 
-router.delete('/notes', (req, res) => {
-  // if note exists, call deleteNote, else, return 'no note with this id'
+router.delete('/notes/:id', (req, res) => {
+  notes = deleteNote(req.params.id, notes);
+  res.json(notes);
 })
 
 module.exports = router;
